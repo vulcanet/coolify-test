@@ -3,143 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vibrant & Colorful Sample Page</title>
+    <title>My Colorful Web Page</title>
     <style>
-        /* Base Reset & Variables */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-
-        /* Colorful Gradient Background */
         body {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: #ffffff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 50%, #a1c4fd 100%);
             min-height: 100vh;
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
-            padding: 20px;
         }
-
-        /* Container Layout */
-        .container {
-            max-width: 900px;
-            width: 100%;
+        header {
+            background-color: rgba(255, 255, 255, 0.85);
+            padding: 20px 40px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
             text-align: center;
         }
-
-        /* Typography Styles */
         h1 {
-            font-size: 3rem;
-            margin-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-            letter-spacing: 1px;
+            color: #ff4757;
+            margin: 0;
         }
-
-        .subtitle {
-            font-size: 1.2rem;
-            margin-bottom: 40px;
-            opacity: 0.9;
+        p {
+            color: #2f3542;
+            font-size: 1.1rem;
         }
-
-        /* Grid Framework for Colorful Cards */
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 25px;
-            margin-bottom: 40px;
+        .container {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+            max-width: 1000px;
         }
-
-        /* Individual Card Styling */
         .card {
-            background: rgba(255, 255, 255, 0.15);
-            backdrop-filter: blur(10px);
-            border-radius: 16px;
-            padding: 30px;
-            text-align: left;
-            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.2);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+            overflow: hidden;
+            width: 280px;
+            transition: transform 0.3s ease;
         }
-
         .card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.3);
         }
-
-        .card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 12px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
+        .card img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
         }
-
-        /* Unique Color Accents for Cards */
-        .card-pink { border-top: 5px solid #ff007f; }
-        .card-cyan { border-top: 5px solid #00f3ff; }
-        .card-yellow { border-top: 5px solid #ffeb3b; }
-
-        .card p {
-            font-size: 0.95rem;
-            line-height: 1.6;
-            color: #f0e6ff;
+        .card-content {
+            padding: 20px;
         }
-
-        /* Colorful Interactive Button Section */
-        .cta-btn {
-            background: linear-gradient(45deg, #ff007f, #764ba2);
-            color: white;
-            border: none;
-            padding: 15px 35px;
-            font-size: 1.1rem;
-            font-weight: bold;
-            border-radius: 50px;
-            cursor: pointer;
-            box-shadow: 0 4px 15px rgba(255, 0, 127, 0.4);
-            transition: all 0.3s ease;
-        }
-
-        .cta-btn:hover {
-            background: linear-gradient(45deg, #764ba2, #ff007f);
-            transform: scale(1.05);
-            box-shadow: 0 6px 20px rgba(255, 0, 127, 0.6);
+        .card-content h3 {
+            margin-top: 0;
+            color: #2ed573;
         }
     </style>
 </head>
 <body>
 
+    <header>
+        <h1>Hello, World!</h1>
+        <p>This is a bright and colorful sample webpage with images.</p>
+    </header>
+
     <div class="container">
-        <!-- Header Section -->
-        <h1>Welcome to a World of Color</h1>
-        <p class="subtitle">A vibrant sample layout styled cleanly with modern CSS.</p>
-
-        <!-- Colorful Content Blocks -->
-        <div class="grid">
-            <div class="card card-pink">
-                <h3><span>💖</span> Vibrant Pink</h3>
-                <p>This card leverages an translucent glassmorphism backdrop accented by an energetic magenta neon upper boundary line.</p>
-            </div>
-
-            <div class="card card-cyan">
-                <h3><span>⚡</span> Electric Cyan</h3>
-                <p>Cyan adds high contrast and energy to dark background themes. It commands immediate visual user attention.</p>
-            </div>
-
-            <div class="card card-yellow">
-                <h3><span>☀️</span> Bright Amber</h3>
-                <p>A touch of golden yellow rounds out the palette, creating warmth and a balanced layout layout symmetry.</p>
+        <div class="card">
+            <img src="https://picsum.photos" alt="Nature view">
+            <div class="card-content">
+                <h3>Nature View</h3>
+                <p>A lovely scenic picture loaded dynamically from an online source.</p>
             </div>
         </div>
 
-        <!-- Call to Action Button -->
-        <button class="cta-btn" onclick="alert('Thank you for exploring this colorful template!')">
-            Interact With Me
-        </button>
+        <div class="card">
+            <img src="https://picsum.photos" alt="Cute puppy">
+            <div class="card-content">
+                <h3>Cute Puppy</h3>
+                <p>Animals bring so much color and joy into our daily lives.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://picsum.photos" alt="Mountain landscape">
+            <div class="card-content">
+                <h3>Mountain Peak</h3>
+                <p>Explore the outdoors and enjoy the beautiful fresh air.</p>
+            </div>
+        </div>
     </div>
 
 </body>
