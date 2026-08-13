@@ -3,77 +3,226 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Colorful Sample Page</title>
+    <title>EcoGrowth Studio</title>
     <style>
+        /* NEW FRESH COLOR PALETTE */
+        :root {
+            --bg-light: #F4F9F6;
+            --bg-white: #FFFFFF;
+            --primary-emerald: #0F5132;
+            --accent-mint: #D1E7DD;
+            --accent-sage: #A3CFBB;
+            --accent-earth: #C5A880;
+            --text-dark: #1E293B;
+            --text-muted: #64748B;
+        }
+
+        /* GLOBAL STYLES */
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
             margin: 0;
             padding: 0;
-            background-color: #f0f4f8;
-            color: #2d3748;
+            line-height: 1.6;
         }
+
         header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
+            background-color: var(--primary-emerald);
+            color: var(--bg-light);
+            padding: 5rem 2rem;
             text-align: center;
-            padding: 40px 20px;
+            position: relative;
         }
-        main {
-            max-width: 800px;
-            margin: 30px auto;
-            padding: 0 20px;
+
+        header h1 {
+            margin: 0;
+            font-size: 2.8rem;
+            font-weight: 800;
+            letter-spacing: -0.5px;
         }
+
+        header p {
+            font-size: 1.1rem;
+            margin-top: 0.75rem;
+            opacity: 0.85;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* CONTAINER AND GRID */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 1.5rem;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 1.8rem;
+            margin-bottom: 3rem;
+            color: var(--primary-emerald);
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 40px;
+            height: 3px;
+            background-color: var(--accent-earth);
+            margin: 0.75rem auto 0;
+            border-radius: 2px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+        }
+
+        /* RE-STYLED CARDS */
         .card {
-            background: white;
-            padding: 30px;
-            margin-bottom: 25px;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            background-color: var(--bg-white);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(15, 81, 50, 0.06);
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+            border: 1px solid rgba(163, 207, 187, 0.3);
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(15, 81, 50, 0.12);
+        }
+
+        /* Soft Flat-Color Image Wrappers */
+        .card-image-wrapper {
+            padding: 2.5rem;
             display: flex;
-            flex-direction: column;
+            justify-content: center;
             align-items: center;
+            height: 140px;
+        }
+
+        .bg-mint-soft { background-color: #E8F5E9; }
+        .bg-sage-soft { background-color: #E0F2F1; }
+        .bg-earth-soft { background-color: #FFF3E0; }
+
+        .card-image-wrapper img {
+            max-height: 100%;
+            object-fit: contain;
+        }
+
+        .card-content {
+            padding: 2rem;
             text-align: center;
         }
-        .card img {
-            width: 100%;
-            max-width: 350px;
-            height: auto;
-            margin-top: 20px;
-            border-radius: 8px;
+
+        .card-content h3 {
+            margin-top: 0;
+            font-size: 1.35rem;
+            color: var(--primary-emerald);
+            margin-bottom: 0.75rem;
         }
-        h1 { margin: 0; font-size: 2.5rem; }
-        p { line-height: 1.6; }
+
+        .card-content p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 2rem;
+        }
+
+        /* BUTTONS */
+        .btn {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            background-color: var(--primary-emerald);
+            color: var(--bg-white);
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: background-color 0.2s, transform 0.1s;
+        }
+
+        .btn:hover {
+            background-color: #0b3d25;
+        }
+
+        .btn:active {
+            transform: scale(0.98);
+        }
+
+        /* FOOTER */
         footer {
             text-align: center;
-            padding: 20px;
-            background-color: #2d3748;
-            color: #a0aec0;
+            padding: 3rem 2rem;
+            background-color: #EBF2EE;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            border-top: 1px solid var(--accent-mint);
         }
     </style>
 </head>
 <body>
 
+    <!-- HERO HEADER -->
     <header>
-        <h1>Welcome to My Website</h1>
-        <p>A sample page with vibrant colors and illustrations</p>
+        <h1>EcoGrowth Studio</h1>
+        <p>Organic digital strategies, sustainable brand consulting, and clean interface development built to last.</p>
     </header>
 
-    <main>
-        <section class="card">
-            <h2>About This Page</h2>
-            <p>This layout uses a purple gradient header, soft card shadows, and responsive images that scale nicely on all screens.</p>
-            <img src="https://unsplash.com" alt="Abstract colorful background">
-        </section>
+    <!-- MAIN BODY -->
+    <div class="container">
+        <h2 class="section-title">What We Do</h2>
 
-        <section class="card">
-            <h2>Creative Ideas</h2>
-            <p>You can replace these image links with your own local graphic files or vector illustrations anytime.</p>
-            <img src="https://unsplash.com" alt="Colorful digital art">
-        </section>
-    </main>
+        <div class="grid">
 
+            <!-- CARD 1 -->
+            <div class="card">
+                <div class="card-image-wrapper bg-mint-soft">
+                    <!-- Flat-illustration seed icon -->
+                    <img src="https://dicebear.com" alt="Growth Strategy Illustration">
+                </div>
+                <div class="card-content">
+                    <h3>Brand Cultivation</h3>
+                    <p>Nurturing identity frameworks from roots to deployment to establish long-term market presence.</p>
+                    <a href="#" class="btn">Learn More</a>
+                </div>
+            </div>
+
+            <!-- CARD 2 -->
+            <div class="card">
+                <div class="card-image-wrapper bg-sage-soft">
+                    <!-- Flat-illustration geometric icon -->
+                    <img src="https://dicebear.com" alt="Strategy Illustration">
+                </div>
+                <div class="card-content">
+                    <h3>Digital Optimization</h3>
+                    <p>Pruning out unnecessary computational weight to make your dynamic platforms light, fast, and eco-friendly.</p>
+                    <a href="#" class="btn">View Studies</a>
+                </div>
+            </div>
+
+            <!-- CARD 3 -->
+            <div class="card">
+                <div class="card-image-wrapper bg-earth-soft">
+                    <!-- Flat-illustration target icon -->
+                    <img src="https://dicebear.com" alt="Analytics Illustration">
+                </div>
+                <div class="card-content">
+                    <h3>Sustainable Analytics</h3>
+                    <p>Transparent measurement setups focused on clear, high-intent conversions without invasive data tracking.</p>
+                    <a href="#" class="btn">See Approach</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- FOOTER -->
     <footer>
-        <p>&copy; 2026 Sample Site. All rights reserved.</p>
+        <p>&copy; 2026 EcoGrowth Studio. Engineered cleanly with semantic HTML & CSS variables.</p>
     </footer>
 
 </body>
