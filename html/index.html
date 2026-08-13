@@ -3,35 +3,143 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Sample Website</title>
+    <title>Vibrant & Colorful Sample Page</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 40px;
-            background-color: #f4f4f4;
-            color: #333;
+        /* Base Reset & Variables */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
-        container {
-            display: block;
-            background: #fff;
+
+        /* Colorful Gradient Background */
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #ffffff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
             padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        /* Container Layout */
+        .container {
+            max-width: 900px;
+            width: 100%;
+            text-align: center;
+        }
+
+        /* Typography Styles */
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            letter-spacing: 1px;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+
+        /* Grid Framework for Colorful Cards */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+
+        /* Individual Card Styling */
+        .card {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            border-radius: 16px;
+            padding: 30px;
+            text-align: left;
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.3);
+        }
+
+        .card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* Unique Color Accents for Cards */
+        .card-pink { border-top: 5px solid #ff007f; }
+        .card-cyan { border-top: 5px solid #00f3ff; }
+        .card-yellow { border-top: 5px solid #ffeb3b; }
+
+        .card p {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: #f0e6ff;
+        }
+
+        /* Colorful Interactive Button Section */
+        .cta-btn {
+            background: linear-gradient(45deg, #ff007f, #764ba2);
+            color: white;
+            border: none;
+            padding: 15px 35px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(255, 0, 127, 0.4);
+            transition: all 0.3s ease;
+        }
+
+        .cta-btn:hover {
+            background: linear-gradient(45deg, #764ba2, #ff007f);
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(255, 0, 127, 0.6);
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <h1>Welcome to My Website</h1>
-        <p>This is a simple paragraph of text on your new home page.</p>
+        <!-- Header Section -->
+        <h1>Welcome to a World of Color</h1>
+        <p class="subtitle">A vibrant sample layout styled cleanly with modern CSS.</p>
 
-	<h2>Useful Resources</h2>
-        <ul>
-            <li><a href="https://www.w3schools.com/html/" target="_blank">W3Schools HTML Tutorial</a></li>
-            <li><a href="https://mozilla.org" target="_blank">MDN Web Docs</a></li>
-        </ul>
+        <!-- Colorful Content Blocks -->
+        <div class="grid">
+            <div class="card card-pink">
+                <h3><span>💖</span> Vibrant Pink</h3>
+                <p>This card leverages an translucent glassmorphism backdrop accented by an energetic magenta neon upper boundary line.</p>
+            </div>
+
+            <div class="card card-cyan">
+                <h3><span>⚡</span> Electric Cyan</h3>
+                <p>Cyan adds high contrast and energy to dark background themes. It commands immediate visual user attention.</p>
+            </div>
+
+            <div class="card card-yellow">
+                <h3><span>☀️</span> Bright Amber</h3>
+                <p>A touch of golden yellow rounds out the palette, creating warmth and a balanced layout layout symmetry.</p>
+            </div>
+        </div>
+
+        <!-- Call to Action Button -->
+        <button class="cta-btn" onclick="alert('Thank you for exploring this colorful template!')">
+            Interact With Me
+        </button>
     </div>
 
 </body>
