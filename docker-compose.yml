@@ -4,9 +4,4 @@ services:
     ports:
       - "8080:80"
     volumes:
-      - type: bind
-        source: ./html
-        target: /usr/share/nginx/html:ro
-        read_only: false
-        bind:
-          create_host_path: true
+      - ./html:/usr/share/nginx/html:ro
