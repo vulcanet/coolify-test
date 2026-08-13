@@ -3,98 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Colorful Web Page</title>
+    <title>Colorful Sample Page</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
-            padding: 20px;
-            background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 50%, #a1c4fd 100%);
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            padding: 0;
+            background-color: #f0f4f8;
+            color: #2d3748;
         }
         header {
-            background-color: rgba(255, 255, 255, 0.85);
-            padding: 20px 40px;
-            border-radius: 15px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            margin-bottom: 30px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
             text-align: center;
+            padding: 40px 20px;
         }
-        h1 {
-            color: #ff4757;
-            margin: 0;
-        }
-        p {
-            color: #2f3542;
-            font-size: 1.1rem;
-        }
-        .container {
-            display: flex;
-            gap: 20px;
-            flex-wrap: wrap;
-            justify-content: center;
-            max-width: 1000px;
+        main {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 0 20px;
         }
         .card {
             background: white;
+            padding: 30px;
+            margin-bottom: 25px;
             border-radius: 12px;
-            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
-            overflow: hidden;
-            width: 280px;
-            transition: transform 0.3s ease;
-        }
-        .card:hover {
-            transform: translateY(-5px);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
         }
         .card img {
             width: 100%;
-            height: 160px;
-            object-fit: cover;
+            max-width: 350px;
+            height: auto;
+            margin-top: 20px;
+            border-radius: 8px;
         }
-        .card-content {
+        h1 { margin: 0; font-size: 2.5rem; }
+        p { line-height: 1.6; }
+        footer {
+            text-align: center;
             padding: 20px;
-        }
-        .card-content h3 {
-            margin-top: 0;
-            color: #2ed573;
+            background-color: #2d3748;
+            color: #a0aec0;
         }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>Hello, World!</h1>
-        <p>This is a bright and colorful sample webpage with images.</p>
+        <h1>Welcome to My Website</h1>
+        <p>A sample page with vibrant colors and illustrations</p>
     </header>
 
-    <div class="container">
-        <div class="card">
-            <img src="https://picsum.photos" alt="Nature view">
-            <div class="card-content">
-                <h3>Nature View</h3>
-                <p>A lovely scenic picture loaded dynamically from an online source.</p>
-            </div>
-        </div>
+    <main>
+        <section class="card">
+            <h2>About This Page</h2>
+            <p>This layout uses a purple gradient header, soft card shadows, and responsive images that scale nicely on all screens.</p>
+            <img src="https://unsplash.com" alt="Abstract colorful background">
+        </section>
 
-        <div class="card">
-            <img src="https://picsum.photos" alt="Cute puppy">
-            <div class="card-content">
-                <h3>Cute Puppy</h3>
-                <p>Animals bring so much color and joy into our daily lives.</p>
-            </div>
-        </div>
+        <section class="card">
+            <h2>Creative Ideas</h2>
+            <p>You can replace these image links with your own local graphic files or vector illustrations anytime.</p>
+            <img src="https://unsplash.com" alt="Colorful digital art">
+        </section>
+    </main>
 
-        <div class="card">
-            <img src="https://picsum.photos" alt="Mountain landscape">
-            <div class="card-content">
-                <h3>Mountain Peak</h3>
-                <p>Explore the outdoors and enjoy the beautiful fresh air.</p>
-            </div>
-        </div>
-    </div>
+    <footer>
+        <p>&copy; 2026 Sample Site. All rights reserved.</p>
+    </footer>
 
 </body>
 </html>
