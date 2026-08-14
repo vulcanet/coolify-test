@@ -7,3 +7,6 @@ repo = "vulcanet/coolify-test"
 clone_path = "/opt/app"
 webhook_secret = "senhaboa"
 file_paths = ["docker-compose.yml"]
+environment = """
+PORT=8001
+"""
