@@ -1,0 +1,9 @@
+[[stack]]
+name = "4-app"
+[stack.config]
+server = "test.vulca.run"
+poll_for_updates = true
+repo = "vulcanet/coolify-test"
+clone_path = "/opt/4-app"
+webhook_secret = "senhaboa"
+file_paths = ["docker-compose.yml"]
